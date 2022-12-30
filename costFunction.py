@@ -15,10 +15,12 @@ def J(X, y, theta, m):
    
     hypothesis = np.matmul(X, thetaVector)  # hypothesis function 
 
+
     costTerm = hypothesis - y
+
     costTranspose  = np.transpose(costTerm) # transpose of Cost term
 
     squaredError = np.matmul(costTerm, costTranspose) # square of the cost terms 
-  
+    
 
     return (1/(2*m))*squaredError
